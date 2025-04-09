@@ -1,7 +1,7 @@
 [gd_scene load_steps=2 format=3 uid="uid://bct0kbb0ejlyf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b1g63"]
-size = Vector2(328, 20)
+size = Vector2(1153, 20)
 
 [node name="Floor" type="StaticBody2D"]
 collision_layer = 2
@@ -10,6 +10,5 @@ collision_layer = 2
 shape = SubResource("RectangleShape2D_b1g63")
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
-position = Vector2(-0.500004, 0)
-scale = Vector2(16.45, 1)
-polygon = PackedVector2Array(-10, -10, 10, -10, 10, 10, -10, 10)
+scale = Vector2(57.65, 1)
+polygon = PackedVector2Array(-10, -10, 10, -10, 10, -0.717117, 10, 10, -10, 10)
