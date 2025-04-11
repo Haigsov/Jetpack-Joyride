@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.Numerics;
 
 public partial class Player : CharacterBody2D
 {
@@ -10,12 +11,10 @@ public partial class Player : CharacterBody2D
     {
         // Called every time the node is added to the scene.
         // Initialization here
-        Velocity = new Vector2(0, 0);
+        Velocity = new Godot.Vector2(0, 0);
     }
     public override void _PhysicsProcess(double delta)
     {
-        Velocity.Y -= new speed * delta;
-
     }
 
 
