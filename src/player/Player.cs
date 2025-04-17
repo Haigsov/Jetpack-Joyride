@@ -12,12 +12,15 @@ public partial class Player : CharacterBody2D
         // Called every time the node is added to the scene.
         // Initialization here
         GD.Print(velocity);
+        //Set("Position", Godot.Vector2(343,343));
+        //GD.Print(Get("Position.Y"));
     }
 
     public override void _PhysicsProcess(double delta)
     {
-        base._PhysicsProcess(delta);
-        velocity = velocity * gravity;
+
+		velocity += GetGravity() * (float)delta;
+
     }
 
 
