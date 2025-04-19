@@ -9,6 +9,7 @@ public partial class Player : CharacterBody2D
     // Wrote some code that don't work
     public override void _Ready()
     {
+        // I swear I'm working on it.
         // Called every time the node is added to the scene.
         // Initialization here
         GD.Print(velocity);
