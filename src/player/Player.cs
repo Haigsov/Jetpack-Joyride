@@ -17,6 +17,7 @@ public partial class Player : CharacterBody2D
 
     public override void _PhysicsProcess(double delta)
     {
+        // The last time I do this
         velocity += GetGravity() * (float)delta;
         GD.Print(velocity);
 
