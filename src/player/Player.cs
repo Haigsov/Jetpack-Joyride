@@ -4,9 +4,7 @@ using System.Numerics;
 
 public partial class Player : CharacterBody2D
 {
-    public int gravity = 200;
     public Godot.Vector2 velocity = Godot.Vector2.Zero;
-    // Wrote some code that don't work
     public override void _Ready()
     {
         // Called every time the node is added to the scene.
@@ -17,10 +15,14 @@ public partial class Player : CharacterBody2D
 
     public override void _PhysicsProcess(double delta)
     {
-        // The last time I do this
         velocity += GetGravity() * (float)delta;
         GD.Print(velocity);
 
+    }
+
+    public void player_controls()
+    {
+        Input.IsActionPressed("Jetpack");
     }
 
 
