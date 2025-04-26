@@ -22,7 +22,9 @@ public partial class Player : CharacterBody2D
 
     public void player_controls()
     {
-        Input.IsActionPressed("Jetpack");
+        if (Input.IsActionPressed("Jetpack")){
+            GD.Print(GetGravity());
+        }
     }
 
 
