@@ -23,7 +23,7 @@ public partial class Player : CharacterBody2D
     public void player_controls()
     {
         if (Input.IsActionPressed("Jetpack")){
-            GD.Print(GetGravity());
+            Position.Y = Position.Y + 10;
         }
     }
 
