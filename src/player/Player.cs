@@ -15,15 +15,15 @@ public partial class Player : CharacterBody2D
 
     public override void _PhysicsProcess(double delta)
     {
-        velocity += GetGravity() * (float)delta;
-        player_controls();
+        // velocity += GetGravity() * (float)delta;
+        player_controls(delta);
 
     }
 
-    public void player_controls()
+    public void player_controls(double delta)
     {
         if (Input.IsActionPressed("Jetpack")){
-            Position.Y = Position.Y + 10;
+            velocity.Y = velocity.Y + 10 * (float)delta;
         }
     }
 
