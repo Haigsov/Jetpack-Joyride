@@ -17,13 +17,14 @@ public partial class Player : CharacterBody2D
     {
         // velocity += GetGravity() * (float)delta;
         player_controls(delta);
+        GD.Print(velocity);
 
     }
 
     public void player_controls(double delta)
     {
         if (Input.IsActionPressed("Jetpack")){
-            velocity.Y = velocity.Y + 10 * (float)delta;
+            velocity.Y = velocity.Y + 100 * (float)delta;
         }
     }
 
