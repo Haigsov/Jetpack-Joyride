@@ -15,7 +15,8 @@ public partial class Player : CharacterBody2D
 
     public override void _PhysicsProcess(double delta)
     {
-        // velocity += GetGravity() * (float)delta;
+        //Gravity making it go down
+        velocity.Y -= 10 * (float)delta;
         player_controls(delta);
         GD.Print(velocity);
 
