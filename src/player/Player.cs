@@ -4,28 +4,27 @@ using System.Numerics;
 
 public partial class Player : CharacterBody2D
 {
-    public Godot.Vector2 velocity = Godot.Vector2.Zero;
+    //public Godot.Vector2 Velocity;
+    public int Gravity;
     public override void _Ready()
     {
-        // Called every time the node is added to the scene.
-        // Initialization here
-        GD.Print(velocity);
-        GD.Print(GetGravity());
+        Velocity = Godot.Vector2.Zero;
+        Gravity = 10;
     }
 
     public override void _PhysicsProcess(double delta)
     {
         //Gravity making it go down
-        velocity.Y -= 10 * (float)delta;
+        Set("Velocity") -= 10 * (float)delta;
         player_controls(delta);
-        GD.Print(velocity);
+        GD.Print(Velocity);
 
     }
 
     public void player_controls(double delta)
     {
         if (Input.IsActionPressed("Jetpack")){
-            velocity.Y = velocity.Y + 100 * (float)delta;
+            Velocity.Y = Velocity.Y + 100 * (float)delta;
         }
     }
 
