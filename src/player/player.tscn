@@ -9,13 +9,12 @@ size = Vector2(20, 37)
 scale = Vector2(1.5, 1.5)
 collision_mask = 6
 script = ExtResource("1_4anbu")
+metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_qnmj6")
-metadata/_edit_group_ = true
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
 scale = Vector2(1, 1.85)
 color = Color(1, 0.427451, 1, 1)
 polygon = PackedVector2Array(-10, -10, 10, -10, 10, 10, -10, 10)
-metadata/_edit_group_ = true
