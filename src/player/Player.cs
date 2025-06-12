@@ -21,17 +21,19 @@ public partial class Player : CharacterBody2D
     {
         NewVelocity.Y += Gravity * (float)delta;
         NewVelocity.X += Speed * (float)delta;
+        PlayerJetpack(delta);
         Velocity = NewVelocity;
         MoveAndSlide();
         GD.Print(Velocity);
     }
 
-    // public void player_controls(double delta)
-    // {
-    //     if (Input.IsActionPressed("Jetpack")){
-    //         Velocity.Y = Velocity.Y + 100 * (float)delta;
-    //     }
-    // }
+    public void PlayerJetpack(double delta)
+    {
+        if (Input.IsActionPressed("Jetpack"))
+        {
+            NewVelocity.Y -= 500 * (float)delta;
+        }
+    }
 
 
 
