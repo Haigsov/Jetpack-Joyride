@@ -18,3 +18,8 @@ shape = SubResource("RectangleShape2D_qnmj6")
 scale = Vector2(1, 1.85)
 color = Color(1, 0.427451, 1, 1)
 polygon = PackedVector2Array(-10, -10, 10, -10, 10, 10, -10, 10)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.2, 1.2)
+limit_top = -20
+limit_bottom = 648
