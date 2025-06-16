@@ -9,4 +9,4 @@
 position = Vector2(14, 597)
 
 [node name="Background" parent="." instance=ExtResource("2_ab7mr")]
-position = Vector2(-4, 5)
+position = Vector2(456, 647)
