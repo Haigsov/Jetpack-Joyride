@@ -1,11 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://ckkldmcjb45b6"]
+[gd_scene load_steps=5 format=3 uid="uid://ckkldmcjb45b6"]
 
+[ext_resource type="Script" uid="uid://b86k37hwb0aw6" path="res://src/main/Main.cs" id="1_djufw"]
 [ext_resource type="PackedScene" uid="uid://coatqqc3shh31" path="res://src/player/player.tscn" id="2_3s6yk"]
+[ext_resource type="PackedScene" uid="uid://c2smaruswtivj" path="res://src/coin/coin.tscn" id="2_jkpqq"]
 [ext_resource type="PackedScene" uid="uid://bct0kbb0ejlyf" path="res://src/floor/floor.tscn" id="3_ab7mr"]
 
 [node name="Main" type="Node2D"]
+script = ExtResource("1_djufw")
+CoinScene = ExtResource("2_jkpqq")
 
 [node name="Player" parent="." instance=ExtResource("2_3s6yk")]
-position = Vector2(14, 597)
+position = Vector2(565, 430)
 
 [node name="Floor" parent="." instance=ExtResource("3_ab7mr")]
+position = Vector2(581, 633)
+
+[node name="Coin spawn" type="Timer" parent="."]
