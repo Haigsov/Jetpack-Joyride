@@ -11,15 +11,20 @@ public partial class Main : Node2D
 	{
 
 		// Instatiate coin scene.
-		StaticBody2D coinInstance = (StaticBody2D)CoinScene.Instantiate();
+		CharacterBody2D coinInstance = (CharacterBody2D)CoinScene.Instantiate();
 		coinInstance.Name = "Coin";
 		AddChild(coinInstance);
 		// Change posiiton of Coin after instantiating.
-		GetNode<StaticBody2D>("Coin").Position = new Vector2(321, 343);
+		GetNode<CharacterBody2D>("Coin").Position = new Vector2(321, 343);
+		// Set up coin velocity.
+		GetNode<CharacterBody2D>("Coin").Velocity = Vector2.Zero;
+
 	}
 
-	// Not being used yet.
+	// Moves coins for now.
 	public override void _Process(double delta)
 	{
+		GetNode<CharacterBody2D>("Coin").Velocity = new Vector2(-20, 0);
+		GetNode<CharacterBody2D>("Coin").MoveAndSlide();
 	}
 }
