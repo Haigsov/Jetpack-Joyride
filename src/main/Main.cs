@@ -6,10 +6,12 @@ public partial class Main : Node2D
 {
 	// Loads coin scene in a variable to be instatiated later.
 	public PackedScene CoinScene = GD.Load<PackedScene>("res://src/coin/coin.tscn");
+	public StaticBody2D Floor;
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-
+		Floor = GetNode<StaticBody2D>("Floor");
+		GD.Print(Floor);
 		// Instatiate coin scene.
 		CharacterBody2D coinInstance = (CharacterBody2D)CoinScene.Instantiate();
 		coinInstance.Name = "Coin";

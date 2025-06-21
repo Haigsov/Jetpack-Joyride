@@ -6,7 +6,7 @@ public partial class Player : CharacterBody2D
 {
     public int Gravity;
     public Godot.Vector2 NewVelocity;
-    // public int Speed;
+    public bool TouchingFloor;
 
     public override void _Ready()
     {
@@ -14,16 +14,24 @@ public partial class Player : CharacterBody2D
         Gravity = 200;
         // Speed = 200;
         NewVelocity = Velocity;
+        GetNode<Area2D>("Area2D").BodyEntered += OnBodyEntered;
+        TouchingFloor = false;
     }
 
     public override void _PhysicsProcess(double delta)
     {
-        NewVelocity.Y += Gravity * (float)delta;
+        if (!TouchingFloor)
+        {
+            NewVelocity.Y += Gravity * (float)delta;
+        }
+        else
+        {
+            NewVelocity.Y = 0;
+        }
         // NewVelocity.X += Speed * (float)delta;
         PlayerJetpack(delta);
         Velocity = NewVelocity;
         MoveAndSlide();
-        GD.Print(Velocity);
     }
 
     public void PlayerJetpack(double delta)
@@ -31,9 +39,18 @@ public partial class Player : CharacterBody2D
         if (Input.IsActionPressed("Jetpack"))
         {
             NewVelocity.Y -= 500 * (float)delta;
+            TouchingFloor = false;
         }
     }
 
+    public void OnBodyEntered(Node2D body) {
+        GD.Print("Works");
 
+        if (body is StaticBody2D)
+        {
+            TouchingFloor = true;
+            GD.Print("Works");
+        }
+    }
 
 }
