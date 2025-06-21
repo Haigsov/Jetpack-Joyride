@@ -12,14 +12,16 @@ public partial class Player : CharacterBody2D
     {
         Velocity = Godot.Vector2.Zero;
         Gravity = 200;
-        // Speed = 200;
         NewVelocity = Velocity;
-        GetNode<Area2D>("Area2D").BodyEntered += OnBodyEntered;
         TouchingFloor = false;
+
+        // Connect signal to a signal handler.
+        GetNode<Area2D>("Area2D").BodyEntered += OnBodyEntered;
     }
 
     public override void _PhysicsProcess(double delta)
     {
+        // When player is on the floor, we set the vertical velocity as 0. If we leave it as is the gravity will keep work on the player and slow down the Jetpack when lifting off the ground.
         if (!TouchingFloor)
         {
             NewVelocity.Y += Gravity * (float)delta;
@@ -36,6 +38,7 @@ public partial class Player : CharacterBody2D
 
     public void PlayerJetpack(double delta)
     {
+        // Check if player is hitting Jetpack (Space)
         if (Input.IsActionPressed("Jetpack"))
         {
             NewVelocity.Y -= 500 * (float)delta;
@@ -44,12 +47,10 @@ public partial class Player : CharacterBody2D
     }
 
     public void OnBodyEntered(Node2D body) {
-        GD.Print("Works");
-
+        // Checks if player is on the floor.
         if (body is StaticBody2D)
         {
             TouchingFloor = true;
-            GD.Print("Works");
         }
     }
 
