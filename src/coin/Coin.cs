@@ -1,8 +1,10 @@
 using Godot;
 using System;
 
-public partial class Coin : CharacterBody2D
+public partial class Coin : Area2D
 {
+
+	public Vector2 velocity;
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
