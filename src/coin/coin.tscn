@@ -1,10 +1,21 @@
-[gd_scene format=3 uid="uid://c2smaruswtivj"]
+[gd_scene load_steps=3 format=3 uid="uid://c2smaruswtivj"]
+
+[ext_resource type="Script" uid="uid://d1c0irqfigsjp" path="res://src/coin/Coin.cs" id="1_gkl4b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ml3ex"]
 
 [node name="Coin" type="CharacterBody2D"]
-collision_layer = 4
+collision_layer = 0
+script = ExtResource("1_gkl4b")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-10, -10, 10, -10, 10, 10, -10, 10)
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
 polygon = PackedVector2Array(-10, -10, 10, -10, 10, 10, -10, 10)
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_ml3ex")
