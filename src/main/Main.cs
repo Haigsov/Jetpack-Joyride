@@ -19,15 +19,9 @@ public partial class Main : Node2D
 
 		// Change posiiton of Coin after instantiating.
 		GetNode<Coin>("Coin").Position = new Vector2(321, 343);
-
-		// Set up coin velocity.
-		GetNode<Coin>("Coin").velocity = Vector2.Zero;
 	}
 
-	// Moves coins for now.
 	public override void _Process(double delta)
 	{
-		GetNode<Coin>("Coin").velocity = new Vector2(-20, 0);
-		GetNode<Coin>("Coin").Position += GetNode<Coin>("Coin").velocity * (float)delta;
 	}
 }
