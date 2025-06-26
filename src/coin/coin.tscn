@@ -10,7 +10,6 @@ script = ExtResource("1_gkl4b")
 
 [node name="CollisionPolygon2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_gkl4b")
-disabled = true
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
 polygon = PackedVector2Array(-10, -10, 10, -10, 10, 10, -10, 10)
