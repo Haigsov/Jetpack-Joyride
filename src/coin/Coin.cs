@@ -16,7 +16,7 @@ public partial class Coin : Area2D
 	public override void _Process(double delta)
 	{
 		// Moves coin 2 pixels per frame left.
-		velocity = new Vector2(-20, 0);
+		velocity = new Vector2(-100, 0);
 		Position += velocity * (float)delta;
 	}
 

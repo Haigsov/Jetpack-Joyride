@@ -19,7 +19,7 @@ public partial class Main : Node2D
 			coinInstance.Name = $"Coin{i}";
 			// Change posiiton of Coin after instantiating.
 			//GetNode<Coin>($"Coin{i}")
-			coinInstance.Position = new Vector2(321 + (i * 100), 343);
+			coinInstance.Position = new Vector2(621 + (i * 100), 343);
 			AddChild(coinInstance);
 		}
 
