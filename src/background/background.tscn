@@ -1,18 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://xta3wx5ffb34"]
-
-[ext_resource type="PackedScene" uid="uid://bct0kbb0ejlyf" path="res://src/floor/floor.tscn" id="1_cc8kx"]
-[ext_resource type="Texture2D" uid="uid://cxoogvomsn8vb" path="res://icon.svg" id="1_dd6cy"]
+[gd_scene format=3 uid="uid://xta3wx5ffb34"]
 
 [node name="Background" type="Node2D"]
 
 [node name="Parallax2D" type="Parallax2D" parent="."]
 repeat_size = Vector2(1152, 0)
 repeat_times = 2
-
-[node name="Sprite2D" type="Sprite2D" parent="Parallax2D"]
-z_index = -1
-position = Vector2(1151, -331)
-scale = Vector2(6.375, 4.08594)
-texture = ExtResource("1_dd6cy")
-
-[node name="Floor" parent="Parallax2D" instance=ExtResource("1_cc8kx")]
