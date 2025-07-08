@@ -5,6 +5,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x75lb"]
 
 [node name="Obstacle" type="Area2D"]
+position = Vector2(296, 117)
 script = ExtResource("1_rj2cn")
 metadata/_edit_group_ = true
 
