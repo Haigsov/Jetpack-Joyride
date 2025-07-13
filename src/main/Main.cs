@@ -4,14 +4,21 @@ using System.Runtime.InteropServices.Marshalling;
 
 public partial class Main : Node2D
 {
-	// Loads coin scene in a variable to be instatiated later.
-	public PackedScene CoinScene = GD.Load<PackedScene>("res://src/coin/coin.tscn");
-	Coin coinInstance;
+	// Loads packed scenes.
+	private PackedScene CoinScene = GD.Load<PackedScene>("res://src/coin/coin.tscn");
+	private PackedScene ObstacleScene = GD.Load<PackedScene>("res://src/obstacle/obstacle.tscn");
+
+	private Coin coinInstance;
+	private Obstacle obstacleInstance;
 
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		// Instatiate coin scene.
+		// Instantiate the obstacle
+		obstacleInstance = (Obstacle)ObstacleScene.Instantiate();
+		obstacleInstance.Name = "Obstacle";
+
+		// Instantiate coin scene.
 		for (int i = 0; i < 3; i++)
 		{
 			coinInstance = (Coin)CoinScene.Instantiate();
@@ -22,6 +29,7 @@ public partial class Main : Node2D
 			AddChild(coinInstance);
 		}
 
+		GetNode<Player>("Player").Position = new Vector2(0, 0);
 
 
 	}
