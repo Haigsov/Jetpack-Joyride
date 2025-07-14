@@ -29,7 +29,7 @@ public partial class Main : Node2D
 			AddChild(coinInstance);
 		}
 
-		GetNode<Player>("Player").Position = new Vector2(0, 0);
+		GetNode<Obstacle>("Obstacle").Position = new Vector2(GetNode<Obstacle>("Obstacle").Position.X + 500, 200);
 
 
 	}
