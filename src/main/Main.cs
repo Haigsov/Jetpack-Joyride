@@ -17,6 +17,7 @@ public partial class Main : Node2D
 		// Instantiate the obstacle
 		obstacleInstance = (Obstacle)ObstacleScene.Instantiate();
 		obstacleInstance.Name = "Obstacle";
+		AddChild(obstacleInstance);
 
 		// Instantiate coin scene.
 		for (int i = 0; i < 3; i++)
@@ -29,7 +30,7 @@ public partial class Main : Node2D
 			AddChild(coinInstance);
 		}
 
-		GetNode<Obstacle>("Obstacle").Position = new Vector2(GetNode<Obstacle>("Obstacle").Position.X + 500, 200);
+		GetNode<Obstacle>("Obstacle").Position = new Vector2(GetNode<Obstacle>("Obstacle").Position.X + 800, 200);
 
 
 	}

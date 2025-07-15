@@ -33,9 +33,9 @@ public partial class Obstacle : Area2D
 
 		Rotation = GD.RandRange(0, 360);
 
-		Position = new Vector2(GD.RandRange(400, 1000), GD.RandRange(100, 1000));
+		Position = new Vector2(GD.RandRange(100, 200), GD.RandRange(100, 200));
 
-		velocity = new Vector2(-20, 0);
+		velocity = new Vector2(-80, 0);
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
