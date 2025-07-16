@@ -17,7 +17,7 @@ public partial class Obstacle : Area2D
 		GD.Print("Before: ", _shape.Size);
 
 		// Change CollisionShape2D's size.
-		_shape.Size = new Vector2(GD.RandRange(100, 1000), 20);
+		_shape.Size = new Vector2(GD.RandRange(100, 450), 20);
 		GD.Print("After: ", _shape.Size);
 
 		poly = GetNode<Polygon2D>("Polygon2D");
