@@ -12,5 +12,3 @@ position = Vector2(307, 595)
 
 [node name="Floor" parent="." instance=ExtResource("3_ab7mr")]
 position = Vector2(581, 633)
-
-[node name="Coin spawn" type="Timer" parent="."]

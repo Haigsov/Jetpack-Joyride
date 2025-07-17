@@ -50,7 +50,6 @@ public partial class Player : CharacterBody2D
 
     public void OnBodyEntered(Node2D body)
     {
-        GD.Print("work");
         // Checks if player is on the floor.
         if (body is StaticBody2D)
         {
