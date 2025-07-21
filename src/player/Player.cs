@@ -46,6 +46,11 @@ public partial class Player : CharacterBody2D
             NewVelocity.Y -= 500 * (float)delta;
             TouchingFloor = false;
         }
+
+        else if (Input.IsActionJustReleased("Jetpack"))
+        {
+            NewVelocity.Y = 0;
+        }
     }
 
     public void OnBodyEntered(Node2D body)
