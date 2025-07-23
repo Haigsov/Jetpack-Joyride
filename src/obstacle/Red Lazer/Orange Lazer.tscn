@@ -1,17 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://ugq6qka363c6"]
+[gd_scene load_steps=3 format=3 uid="uid://d1gusyo3cgo7i"]
 
-[ext_resource type="Script" uid="uid://d02u25jumeon2" path="res://src/obstacle/Obstacle.cs" id="1_rj2cn"]
+[ext_resource type="Script" uid="uid://d02u25jumeon2" path="res://src/obstacle/Orange Lazer/Orange Lazer.cs" id="1_q76v6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x75lb"]
 
-[node name="Obstacle" type="Area2D"]
+[node name="Red Lazer" type="Area2D"]
 collision_layer = 16
-script = ExtResource("1_rj2cn")
+script = ExtResource("1_q76v6")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_x75lb")
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
-color = Color(0.827451, 0.552941, 0.101961, 1)
+color = Color(0.827451, 0.0470588, 0.101961, 1)
 polygon = PackedVector2Array(-10, -10, 10, -10, 10, 10, -10, 10)
