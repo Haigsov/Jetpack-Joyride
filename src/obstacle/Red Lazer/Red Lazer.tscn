@@ -1,12 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://d1gusyo3cgo7i"]
-
-[ext_resource type="Script" uid="uid://d02u25jumeon2" path="res://src/obstacle/Orange Lazer/Orange Lazer.cs" id="1_q76v6"]
+[gd_scene load_steps=2 format=3 uid="uid://d1gusyo3cgo7i"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x75lb"]
 
 [node name="Red Lazer" type="Area2D"]
 collision_layer = 16
-script = ExtResource("1_q76v6")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
