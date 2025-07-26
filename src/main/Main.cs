@@ -31,11 +31,5 @@ public partial class Main : Node2D
 		}
 
 		GetNode<Obstacle>("Obstacle").Position = new Vector2(GetNode<Obstacle>("Obstacle").Position.X + 800, 200);
-
-
-	}
-
-	public override void _Process(double delta)
-	{
 	}
 }

@@ -1,9 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://d1gusyo3cgo7i"]
+[gd_scene load_steps=3 format=3 uid="uid://d1gusyo3cgo7i"]
+
+[ext_resource type="Script" uid="uid://brrjaphrsfjy3" path="res://src/obstacle/Red Lazer/RedLazer.cs" id="1_a5y1n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x75lb"]
 
 [node name="Red Lazer" type="Area2D"]
 collision_layer = 16
+script = ExtResource("1_a5y1n")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
