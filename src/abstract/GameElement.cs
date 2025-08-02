@@ -1,6 +1,7 @@
 using Godot;
 using System;
 
+// Meant to be an abstraction for obstacles.
 public abstract partial class GameElement : Area2D
 {
 	public Vector2 velocity;

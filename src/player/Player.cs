@@ -47,7 +47,8 @@ public partial class Player : CharacterBody2D
             TouchingFloor = false;
         }
 
-        else if (Input.IsActionJustReleased("Jetpack"))
+        // Check if player has released Jetpack (Space).
+        if (Input.IsActionJustReleased("Jetpack"))
         {
             NewVelocity.Y = 0;
         }
@@ -61,6 +62,7 @@ public partial class Player : CharacterBody2D
             TouchingFloor = true;
         }
 
+        // Removes coin from the main scene.
         else if (body is Coin)
         {
             body.QueueFree();
